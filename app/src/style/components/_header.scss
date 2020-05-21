@@ -1,0 +1,39 @@
+.site-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px 0;
+
+    &__left-side{
+        display: flex;
+
+    }
+    .nav-link-wrapper{
+        height: 25px;
+        text-transform: uppercase;
+        margin-right: 20px;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom .5s;
+       
+        & > a{
+            color: $mainBlue;
+            text-decoration: none;
+            //transition: color 5s;
+            &:hover {
+                color: $mainBlue;
+            }
+        }
+        &:hover {
+            border-bottom: 1px solid $mainBlue;
+        }
+    }
+    .active-nav-link {
+        border-bottom: 1px solid $mainBlue;
+
+        a {
+            color: $mainBlue !important;
+        }
+    }
+   
+}

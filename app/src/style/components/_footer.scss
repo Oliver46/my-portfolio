@@ -1,0 +1,15 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: $mainBlue;
+    padding: 40px 0px;
+    color:$white;
+}
+
+.footer-area {
+    text-align: center;
+    p {
+        line-height: 2;
+    }
+}

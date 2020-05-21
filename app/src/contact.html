@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <header class="wrapper">
+        <nav class="site-header">
+            <div class="right-side">
+                <div class="brand">
+                    <h1><a href="http://www.leonoliver.com">OLIVER LEON</a></h1>
+                </div>
+            </div>
+            <div class="site-header__left-side">
+                <div class="nav-link-wrapper">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-link-wrapper ">
+                    <a href="about.html">About</a>
+                </div>
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>  
+
+    <div class="wrapper-hero">
+        <div class="large-hero" id="map">
+           
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <section class="title-container">
+            <h1>Contact</h1>
+            <p>Fill out the form to get in contact with me.</p>
+        </section>
+    </div>    
+
+    <div class="wrapper">
+        <div class="content-wrapper">
+        
+                <div class="wrapper-form">
+                    
+                    <form class="form" id="myForm" name="addForm">
+                        <div id="error_message"></div>
+                        <div id="success_message"></div>
+                        <div class="input_field">
+                            <input type="text" name="name" id="name" placeholder="Name" autocomplete="off">
+                        </div>
+                        <div class="input_field">
+                            <input type="email" name="email" id="email" placeholder="Email" autocomplete="off">
+                        </div>
+                        <div class="input_field">
+                            <input type="phone" name="phone" id="phone" placeholder="Phone" autocomplete="off">
+                        </div>
+                        <div class="input_field">
+                            <input type="text" name="subject" id="subject" placeholder="Subject" autocomplete="off">
+                        </div>
+                        <div class="input_field">
+                            <textarea id="message" name="message" placeholder="Message"></textarea>
+                        </div>
+                        <div class="btn">
+                            <input type="submit" name="submit" id="submit">
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+       
+    </div>
+
+<footer>
+    <div class="wrapper">
+        <div class="footer-area">
+            <p>COPYRIGHT &copy; 2016 - 2020 OLIVER LEON</p>
+            <p>All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+<script>
+    function initMap(){
+        //Map Options
+        var options = {
+            zoom: 5.5,
+            center: {lat:36.0902,lng:-86.7129}
+        }
+        //New Map
+        var map = new google.maps.Map(document.getElementById('map'), options)
+
+        //Listen for click on map
+        google.maps.event.addListener(map, 'click', function(event){
+            addMarker({coords:event.latLng});
+        });
+
+        //Array of Markers
+        var markers = [
+            {
+                coords:{lat:38.0406,lng:-84.5037},
+                iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                content:'<h1>Lexington, KY</h1>'
+            },
+            {
+                coords:{lat:38.2527,lng:-85.7585},
+                 content:'<h1>Louisville, KY</h1>'
+            },
+            {
+                coords:{lat:35.2271,lng:-80.8431},
+                content:'<h1>Charlotte, NC</h1>'
+            },
+            {
+                coords:{lat:42.7325,lng:-84.5555},
+                content:'<h1>lansing, MI</h1>'
+            },
+            {
+                coords:{lat:35.9606,lng:-83.9207},
+                content:'<h1>Knoxville, TN</h1>'
+            },
+            {
+                coords:{lat:28.5383,lng:-81.3792},
+                content:'<h1>Orlando, FL</h1>'
+            },
+            {
+                coords:{lat:38.6270,lng:-90.1994},
+                content:'<h1>St. Louis, MO</h1>'
+            }
+
+        ];
+
+        //Loop through markers
+        for(i=0; i < markers.length; i++){
+            //Add Marker
+            addMarker(markers[i]);
+        }
+        // addMarker({coords:{lat:38.0406,lng:-84.5037},
+        //         iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+        //         content:'<h1>Lexington, KY</h1>'
+        //         });
+        // addMarker({coords:{lat:38.2527,lng:-85.7585},
+        // content:'<h1>Louisville, KY</h1>'
+        // });
+
+
+        //Add Marker Function
+        function addMarker(props){
+            var marker = new google.maps.Marker({
+            position:props.coords,
+            map:map,
+            //icon: props.iconImage
+            });
+            //check for custom icons
+            if(props.iconImage){
+                //set Icon image
+                marker.setIcon(props.iconImage);
+            }
+            //check content
+            if(props.content){
+                var infoWindow = new google.maps.InfoWindow({
+                    content:props.content
+                });
+                marker.addListener('click', function(){
+                infoWindow.open(map, marker);
+                });
+            }
+        }
+
+        //Add 1 Marker
+        /*var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        var marker = new google.maps.Marker({
+            position:{lat:38.0406,lng:-84.5037},
+            map:map,
+            icon: image
+        });
+
+        var infoWindow = new google.maps.InfoWindow({
+            content:'<h1>Lexington, Ky</h1>'
+        });
+
+        
+        */
+    }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr4WEJ00QLLKGwqr4ISloi_wWTM3jxVdw&callback=initMap">
+</script>
+</body>
+</html>

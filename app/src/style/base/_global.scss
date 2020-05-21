@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+p {
+    letter-spacing: 0.1em;
+}
+h1 {
+    color: $mainBlue;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+}
+h4 {
+    text-transform: uppercase;
+}
+a:visited, a:active {
+    color: $mainBlue;
+}
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 50px;
+}
+
+.title-container{
+    padding: 50px 0px;
+    h1 {
+        margin: 0px 0px 40px;
+    }
+}
+
+ul {
+    li {
+        line-height: 2;
+    }
+}
+
+p {
+    line-height: 1.7;
+}
