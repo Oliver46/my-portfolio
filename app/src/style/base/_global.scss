@@ -52,5 +52,10 @@ p {
 
 /* font awesom */
 svg.svg-inline--fa.fa-github.fa-w-16{
-    color: black;
+    color: $black;
+    font-size: 1.5rem;
+}
+svg.svg-inline--fa.fa-linkedin.fa-w-14{
+    color: $linkedin;
+    font-size: 1.5rem;
 }
