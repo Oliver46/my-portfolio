@@ -5,9 +5,15 @@
     position: relative;
     padding: 20px 0;
 
-    &__left-side{
+    &__right-side{
         display: flex;
 
+    }
+    &__left-side {
+        h2 {
+            color: $mainBlue;
+            text-transform: uppercase;
+        }
     }
     .nav-link-wrapper{
         height: 25px;
