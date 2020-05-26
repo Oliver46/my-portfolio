@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <!--STEP 1: Paste this in header -->
+	<!-- To add reCAPTCHA to the forms -->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
     <header class="wrapper">
@@ -22,6 +25,9 @@
                 </div>
                 <div class="nav-link-wrapper active-nav-link">
                     <a href="contact.html">Contact</a>
+                </div>
+                <div>
+                    <button id="modalBtn" class="button">Click Here</button>
                 </div>
             </div>
         </nav>
@@ -45,7 +51,7 @@
         
                 <div class="wrapper-form">
                     
-                    <form class="form" id="myForm" name="addForm">
+                    <form action="mailto:oliver46leon@hotmail.com" method="get" enctype="text/plain" class="form" id="myForm" name="addForm">
                         <div id="error_message"></div>
                         <div id="success_message"></div>
                         <div class="input_field">
@@ -63,6 +69,7 @@
                         <div class="input_field">
                             <textarea id="message" name="message" placeholder="Message"></textarea>
                         </div>
+                        <div id="recaptcha" class="g-recaptcha" data-sitekey="6Len42AUAAAAAPECVLWjsD9ko1NcFXC76_g72MSC"></div>
                         <div class="btn">
                             <input type="submit" name="submit" id="submit">
                         </div>
