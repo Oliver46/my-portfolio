@@ -54,6 +54,7 @@ textarea {
     letter-spacing: 5px;
     font-weight: 500;
     cursor: pointer;
+    transition: background-color 1s ease-in;
 }
 .wrapper-form .btn input[type="submit"]:hover {
     background-color: #18698a;
