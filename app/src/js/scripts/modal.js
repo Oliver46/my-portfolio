@@ -17,9 +17,16 @@ class Modal {
         //modalBtn.addEventListener('click', this.openModal);
         this.modalBtn.addEventListener('click', e => this.openModal(e));
         //listen for close click
-        this.closeBtn.addEventListener('click', e => this.closeModal(e));
+        this.closeBtn.addEventListener('click', () => this.closeModal());
         //pushes any key
+        document.addEventListener("keyup", e => this.keyPressHandler(e));
+    }
 
+    keyPressHandler(e) {
+        console.log(e.keyCode);
+        if(e.keyCode == 27) {
+            this.closeModal();
+        }
     }
 
     //function to open modal
@@ -29,8 +36,8 @@ class Modal {
         this.modal.classList.add("visible");
     } 
     //function to close modal
-    closeModal(e){
-        e.preventDefault();
+    closeModal(){
+        //e.preventDefault();
         this.modal.classList.remove("visible");
     }
 

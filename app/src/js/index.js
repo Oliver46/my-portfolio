@@ -6,8 +6,10 @@ import '@fortawesome/fontawesome-free/js/brands';
 
 import Person from './scripts/Person';
 import Modal from './scripts/Modal';
+import mobileMenu from './scripts/mobileMenu';
 
 new Modal();
+new mobileMenu();
 
 //Instance of the modal class
 //get modal element
