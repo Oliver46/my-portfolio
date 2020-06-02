@@ -44,6 +44,13 @@
 
     @include atMedium{
         width: 50%;
+        height: 30%;
+    }
+
+    @include atBigMedium {
+        width: 50%;
+        height: 40%;
+        //border: 2px solid red;
     }
 }
 
