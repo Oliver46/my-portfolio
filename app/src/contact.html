@@ -7,9 +7,6 @@
     <meta name="keywords" content="Web Developer, Wordpress Developer, Frond End Developer"> 
     <meta name="author" content="Oliver Leon">
     <title>Leon Oliver Web Portfolio | Contact</title>
-    <!--STEP 1: Paste this in header -->
-	<!-- To add reCAPTCHA to the forms -->
-	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
     <header class="wrapper">
@@ -61,25 +58,24 @@
         
                 <div class="wrapper-form">
                     
-                    <form action="mailto:oliver46leon@hotmail.com" method="get" enctype="text/plain" class="form" id="myForm" name="addForm">
+                    <form action="https://formspree.io/meqrzglv" method="post" class="form" id="myForm" name="addForm">
                         <div id="error_message"></div>
                         <div id="success_message"></div>
                         <div class="input_field">
-                            <input type="text" name="name" id="name" placeholder="Name" autocomplete="off">
+                            <input type="text" name="fullname" id="name" placeholder="Name" autocomplete="off" required>
                         </div>
                         <div class="input_field">
-                            <input type="email" name="email" id="email" placeholder="Email" autocomplete="off">
+                            <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" required>
                         </div>
                         <div class="input_field">
-                            <input type="phone" name="phone" id="phone" placeholder="Phone" autocomplete="off">
+                            <input type="phone" name="phone" id="phone" placeholder="Phone" autocomplete="off" required>
                         </div>
                         <div class="input_field">
-                            <input type="text" name="subject" id="subject" placeholder="Subject" autocomplete="off">
+                            <input type="text" name="subject" id="subject" placeholder="Subject" autocomplete="off" required>
                         </div>
                         <div class="input_field">
                             <textarea id="message" name="message" placeholder="Message"></textarea>
                         </div>
-                        <div id="recaptcha" class="g-recaptcha" data-sitekey="6Len42AUAAAAAPECVLWjsD9ko1NcFXC76_g72MSC"></div>
                         <div class="btn">
                             <input type="submit" name="submit" id="submit">
                         </div>
