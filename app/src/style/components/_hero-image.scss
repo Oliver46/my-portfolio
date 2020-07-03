@@ -1,5 +1,6 @@
 
 .large-hero { 
+   
     position: relative;
    
     &__text-content{
@@ -12,7 +13,8 @@
     }
     &__title {
       padding: 20px;
-      background-color: red;
+      //background-color: red;
+      font-size: 3rem;
     }
     img {
         display: block;
@@ -20,6 +22,8 @@
         height: auto;
     }
 }
+
+
 .hero-overlay {
   position: relative;
 }
