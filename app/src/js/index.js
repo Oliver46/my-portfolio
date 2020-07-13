@@ -7,11 +7,15 @@ import '@fortawesome/fontawesome-free/js/brands';
 import Person from './scripts/Person';
 import Modal from './scripts/Modal';
 import mobileMenu from './scripts/mobileMenu';
+import currentYearFooter from './scripts/currentYearFooter';
 import Clock from './scripts/Clock';
+
 
 new Modal();
 new mobileMenu();
+new currentYearFooter();
 new Clock();
+
 
 //Instance of the modal class
 //get modal element
